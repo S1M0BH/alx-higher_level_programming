@@ -28,6 +28,11 @@ class Square:
             raise ValueError('size must be >= 0')
         self.__size = value
 
+    def area(self):
+        """Return square area """
+
+        return (self.__size * self.__size)
+
     def my_print(self):
         """print square in (#) """
 
@@ -38,7 +43,3 @@ class Square:
             print("#" * self.__size)
     
     
-    def area(self):
-        """Return square area """
-
-        return (self.__size * self.__size)
