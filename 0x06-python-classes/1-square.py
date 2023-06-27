@@ -5,7 +5,7 @@
 class Square:
     """Substitute square """
 
-    def __init__(self, size):
-        """Initializes for  data """
-
+    def __init__(self, size=0):
+        """Initializes for data"""
+        
         self.__size = size

@@ -4,4 +4,5 @@
 
 class Square:
     """not define something"""
+    
     pass

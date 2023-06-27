@@ -3,15 +3,17 @@
 
 
 class Square:
-    """Substitute square"""
+    """Substitute square """
 
     def __init__(self, size=0):
-        """Initializes for data """
+        """Initializes for data"""
+
         self.__size = size
 
     @property
     def size(self):
-       
+        """Get the size Square"""
+
         return self.__size
 
     @size.setter
@@ -23,7 +25,8 @@ class Square:
         self.__size = value
 
     def area(self):
-        
+        """Return the current square area"""
+
         return self.__size * self.__size
 
     def __le__(self, other):

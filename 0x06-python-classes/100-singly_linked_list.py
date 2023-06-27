@@ -1,25 +1,25 @@
 #!/usr/bin/python3
-"""singly linked list"""
+""" singly linked list """
 
 
 class Node:
-    """" node in singly linked list"""
+    """ node in singly linked list """
 
     def __init__(self, data, next_node=None):
-        """initializes for data """
+        """Initializes for data"""
 
         self.data = data
         self.next_node = next_node
 
     @property
     def data(self):
-        """ Gets data attribute """
+        """Get data attribute."""
 
         return (self.__data)
 
     @data.setter
     def data(self, value):
-        """ Sets data Attribute """
+        """Set data attribute."""
 
         if not isinstance(value, int):
             raise TypeError('data must be an integer')
@@ -27,30 +27,29 @@ class Node:
 
     @property
     def next_node(self):
-        """ Get next node Attribute """
+        """Get next node attribute"""
 
         return (self.__next_node)
 
     @next_node.setter
     def next_node(self, value):
-        """ set  next node Attribute """
+        """Set next node attribute"""
 
         if (value is not None and not isinstance(value, Node)):
             raise TypeError('next_node must be a Node object')
-
         self.__next_node = value
 
 
 class SinglyLinkedList:
-    """ singly linked list """
+    """ singly linked list"""
 
     def __init__(self):
-        """ Initializes for data """
+        """Initializes for data"""
 
         self.head = None
 
     def __str__(self):
-        """Print list """
+        """Print list"""
 
         printsll = ""
         location = self.head
@@ -60,7 +59,8 @@ class SinglyLinkedList:
         return printsll[:-1]
 
     def sorted_insert(self, value):
-        
+        """ Inserts a node into a sorted linked list. """
+
         new = Node(value)
         if not self.head:
             self.head = new

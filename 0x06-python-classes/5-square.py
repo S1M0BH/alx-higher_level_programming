@@ -6,40 +6,35 @@ class Square:
     """Substitute square"""
 
     def __init__(self, size=0):
-        """Initializes for data """
-        if not isinstance(size, int):
-            raise TypeError('size must be an integer')
-        if size < 0:
-            raise ValueError('size must be >= 0')
+        """Initializes for data"""
 
-        self.__size = size
+        self.size = size
 
     @property
     def size(self):
-        """Retrieves size"""
+        """Retrieve size"""
 
         return self.__size
 
     @size.setter
     def size(self, value):
+        """Set Size"""
+
         if not isinstance(value, int):
-            raise TypeError('size must be an integer')
-        if value < 0:
-            raise ValueError('size must be >= 0')
+            raise TypeError("size must be an integer")
+        elif value < 0:
+            raise ValueError("size must be >=0")
         self.__size = value
 
     def area(self):
-        """Return square area """
+        """Return the square area"""
 
         return (self.__size * self.__size)
 
     def my_print(self):
-        """print square in (#) """
+        """print square in (#)"""
 
         if self.__size == 0:
             print()
-
         for i in range(self.__size):
             print("#" * self.__size)
-    
-    

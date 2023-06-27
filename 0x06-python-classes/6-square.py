@@ -6,7 +6,8 @@ class Square:
     """Substitute square"""
 
     def __init__(self, size=0, position=(0, 0)):
-        """Initializes for data """
+        """Initializes for data"""
+
         self.size = size
         self.position = position
 
@@ -15,7 +16,8 @@ class Square:
 
     @property
     def size(self):
-        
+        """Retrieve in size"""
+
         return self.__size
 
     @size.setter
@@ -28,12 +30,14 @@ class Square:
 
     @property
     def position(self):
-        """ get position of this square """
+        """ get position of this Square """
+
         return self.__position
 
     @position.setter
     def position(self, value):
-        """ set the position of this square """
+        """ set the position of this Square """
+
         if not isinstance(value, tuple):
             raise TypeError('position must be a tuple of 2 positive integers')
         if len(value) != 2:
@@ -43,11 +47,13 @@ class Square:
         self.__position = value
 
     def area(self):
-        """Returns: The squared area """
+        """Return the square area"""
+
         return self.__size * self.__size
 
     def pos_print(self):
-        """returns the position"""
+        """print position"""
+
         pos = ""
         if self.size == 0:
             return "\n"
@@ -62,5 +68,6 @@ class Square:
         return pos
 
     def my_print(self):
-        """print the square in (#)"""
+        """print the square in (#) """
+
         print(self.pos_print(), end='')
