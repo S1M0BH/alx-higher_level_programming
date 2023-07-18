@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 # test_rectangle.py
+# Brennan D Baraban <375@holbertonschool.com>
 """Defines unittests for models/rectangle.py.
 
 Unittest classes:
@@ -22,7 +23,7 @@ from models.rectangle import Rectangle
 
 
 class TestRectangle_instantiation(unittest.TestCase):
-    """Unittests to test instantiation of the Rectangle class"""
+    """Unittests for testing instantiation of the Rectangle class."""
 
     def test_rectangle_is_base(self):
         self.assertIsInstance(Rectangle(10, 2), Base)
@@ -111,7 +112,7 @@ class TestRectangle_instantiation(unittest.TestCase):
 
 
 class TestRectangle_width(unittest.TestCase):
-    """Unittests to test the rectangle width attribute configuration."""
+    """Unittests for testing initialization of Rectangle width attribute."""
 
     def test_None_width(self):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
@@ -187,7 +188,7 @@ class TestRectangle_width(unittest.TestCase):
 
 
 class TestRectangle_height(unittest.TestCase):
-    """Unittests to test the initialization of the rectangle's height attribute"""
+    """Unittests for testing initialization of Rectangle height attribute."""
 
     def test_None_height(self):
         with self.assertRaisesRegex(TypeError, "height must be an integer"):
@@ -454,7 +455,14 @@ class TestRectangle_stdout(unittest.TestCase):
 
     @staticmethod
     def capture_stdout(rect, method):
-        """Captures and returns text printed to stdout"""
+        """Captures and returns text printed to stdout.
+
+        Args:
+            rect (Rectangle): The Rectangle to print to stdout.
+            method (str): The method to run on rect.
+        Returns:
+            The text printed to stdout by calling method on sq.
+        """
         capture = io.StringIO()
         sys.stdout = capture
         if method == "print":
